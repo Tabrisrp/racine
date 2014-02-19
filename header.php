@@ -8,6 +8,7 @@
   <?php wp_head() ?>
 </head>
 <body <?php body_class() ?>>
+<span class="skip-links"><a href="#main"><?php _e( 'Skip to main content', 'wp-root-theme' ) ?></a></span>
 <header role="banner">
     <?php if ( is_front_page() || is_home() ) : ?>
         <h1><a href="<?php echo home_url( '/' ) ?>"><?php bloginfo( 'name' ) ?></a></h1>

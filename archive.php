@@ -15,7 +15,7 @@
         endif ?>
     </div>
     <div class="content">
-        <?php get_template_part( 'loop', 'posts' ) ?>
+        <?php get_template_part( 'loop', 'posts' ); ?>
     </div>
 <?php get_sidebar() ?>
 </main>

@@ -2,7 +2,7 @@
 <main role="main" id="main">
     <div class="content">
     	    <article <?php post_class() ?>>
-    	    	<h1><?php _e( 'Page not found', 'wp-root' ) ?></h1>  
+    	    	<h1><?php _e( 'Page not found', 'wp-root-theme' ) ?></h1>  
     	    </article>
     </div>
 </main>

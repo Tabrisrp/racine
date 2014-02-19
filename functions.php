@@ -1,4 +1,8 @@
 <?php
+
+// Includes the customizer settings
+require_once( 'inc/customizer.php' );
+
 // Set content width value based on the theme's design
 if ( ! isset( $content_width ) )
 	$content_width = 600;
@@ -11,14 +15,14 @@ if ( !function_exists( 'rp_theme_features' ) ) {
     	add_theme_support( 'automatic-feed-links' );
     
     	// Add theme support for Featured Images
-    	add_theme_support( 'post-thumbnails', array( 'post', 'page' ) );	
+    	add_theme_support( 'post-thumbnails' );	
     
     	// Add theme support for Semantic Markup
     	$markup = array( 'search-form', 'comment-form', 'comment-list', );
     	add_theme_support( 'html5', $markup );	
     
     	// Add theme support for Translation
-    	load_theme_textdomain( 'wp-root', get_template_directory() . '/lang' );	
+    	load_theme_textdomain( 'wp-root-theme', get_template_directory() . '/lang' );	
     }
 }
 
@@ -30,8 +34,8 @@ if ( !function_exists( 'rp_nav_menus' ) ) {
     function rp_nav_menus() {
     
     	$locations = array(
-    		'navigation' => __( 'Navigation', 'wp-root' ),
-    		'footer' => __( 'Footer menu', 'wp-root' ),
+    		'navigation' => __( 'Navigation', 'wp-root-theme' ),
+    		'footer' => __( 'Footer menu', 'wp-root-theme' ),
     	);
     	register_nav_menus( $locations );
     }

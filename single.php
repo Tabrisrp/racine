@@ -10,7 +10,7 @@
     	    	<?php the_content(); ?>
     	    	<?php wp_link_pages() ?>    
     	    	<aside>
-    	    	    <span><?php _e( 'Posted by', 'wp-root' ) ?> <?php the_author() ?> <?php _e( 'on', 'wp-root' ) ?> <?php echo get_the_date() ?></span>
+    	    	    <span><?php _e( 'Posted by', 'wp-root-theme' ) ?> <?php the_author() ?> <?php _e( 'on', 'wp-root-theme' ) ?> <?php echo get_the_date() ?></span>
     	    	    <?php the_category() ?>
     	    	    <?php the_tags() ?>
     	    	</aside>
