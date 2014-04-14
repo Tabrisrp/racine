@@ -1,4 +1,17 @@
 <?php
+//WordPress.com-specific functions and definitions
+
+global $themecolors;
+
+//Set a default theme color array for WP.com.
+
+$themecolors = array(
+	'bg' => '',
+	'border' => '',
+	'text' => '',
+	'link' => '',
+	'url' => '',
+);
 
 // Includes the customizer settings
 require_once( 'inc/customizer.php' );
@@ -28,7 +41,6 @@ if ( !function_exists( 'rp_theme_features' ) ) {
         add_editor_style( 'editor-style.css' );
     }
 }
-
 // Hook into the 'after_setup_theme' action
 add_action( 'after_setup_theme', 'rp_theme_features' );
 
@@ -43,9 +55,19 @@ if ( !function_exists( 'rp_nav_menus' ) ) {
     	register_nav_menus( $locations );
     }
 }
-
 // Hook into the 'init' action
 add_action( 'init', 'rp_nav_menus' );
+
+// Enqueue scripts and styles
+if ( !function_exists( 'rp_enqueue_scripts') ) {
+    function rp_enqueue_scripts() {
+        wp_enqueue_style( 'theme-style', get_stylesheet_uri(), '', '1.2' );
+        if ( is_singular() ) {
+            wp_enqueue_script( 'comment-reply' );
+        }
+    }
+}
+add_action( 'wp_enqueue_scripts', 'rp_enqueue_scripts' );
 
 // Add thickbox
 add_action( 'after_setup_theme', 'add_thickbox' );
@@ -81,7 +103,9 @@ if ( !function_exists( 'rp_register_sidebars' ) ) {
 
 // Add class to menu items
 add_filter('nav_menu_css_class' , 'rp_menu_item_class' , 10 , 1);
-function rp_menu_item_class($classes){
-             $classes[] = "flex-fluid";
-     return $classes;
+if ( !function_exists( 'rp_menu_item_class' ) ) {
+    function rp_menu_item_class($classes) {
+        $classes[] = "flex-fluid";
+        return $classes;
+    }
 }
