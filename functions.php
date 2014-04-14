@@ -10,19 +10,22 @@ if ( ! isset( $content_width ) )
 // Register Theme Features
 if ( !function_exists( 'rp_theme_features' ) ) {
     function rp_theme_features()  {
-    
+
     	// Add theme support for Automatic Feed Links
     	add_theme_support( 'automatic-feed-links' );
-    
+
     	// Add theme support for Featured Images
-    	add_theme_support( 'post-thumbnails' );	
-    
+    	add_theme_support( 'post-thumbnails' );
+
     	// Add theme support for Semantic Markup
     	$markup = array( 'search-form', 'comment-form', 'comment-list', );
-    	add_theme_support( 'html5', $markup );	
-    
+    	add_theme_support( 'html5', $markup );
+
     	// Add theme support for Translation
-    	load_theme_textdomain( 'wp-root-theme', get_template_directory() . '/lang' );	
+    	load_theme_textdomain( 'wp-root-theme', get_template_directory() . '/lang' );
+
+        // Add support for Editor Style
+        add_editor_style( 'editor-style.css' );
     }
 }
 
@@ -32,7 +35,7 @@ add_action( 'after_setup_theme', 'rp_theme_features' );
 // Register Navigation Menus
 if ( !function_exists( 'rp_nav_menus' ) ) {
     function rp_nav_menus() {
-    
+
     	$locations = array(
     		'navigation' => __( 'Navigation', 'wp-root-theme' ),
     		'footer' => __( 'Footer menu', 'wp-root-theme' ),
@@ -47,6 +50,7 @@ add_action( 'init', 'rp_nav_menus' );
 // Add thickbox
 add_action( 'after_setup_theme', 'add_thickbox' );
 
+// Automaticly add class="thickbox" to images with links in editor content
 add_filter( 'the_content', 'rp_auto_thickbox', 10, 1 );
 if ( !function_exists( 'rp_auto_thickbox' ) ) {
     function rp_auto_thickbox( $content ) {
