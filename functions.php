@@ -31,7 +31,7 @@ if ( !function_exists( 'rp_theme_features' ) ) {
     	add_theme_support( 'post-thumbnails' );
 
     	// Add theme support for Semantic Markup
-    	$markup = array( 'search-form', 'comment-form', 'comment-list', );
+    	$markup = array( 'search-form', 'comment-form', 'comment-list', 'gallery' );
     	add_theme_support( 'html5', $markup );
 
     	// Add theme support for Translation
@@ -68,6 +68,24 @@ if ( !function_exists( 'rp_enqueue_scripts') ) {
     }
 }
 add_action( 'wp_enqueue_scripts', 'rp_enqueue_scripts' );
+
+//Conditionally Enqueue Script for IE browsers less than IE 9
+function rp_enqueue_lt_ie9() {
+    global $is_IE;
+ 
+    // Return early, if not IE
+    if ( ! $is_IE ) return;
+ 
+    // Include the file, if needed
+    if ( ! function_exists( 'wp_check_browser_version' ) )
+        include_once( ABSPATH . 'wp-admin/includes/dashboard.php' );
+ 
+    // IE version conditional enqueue
+    $response = wp_check_browser_version();
+    if ( 0 > version_compare( intval( $response['version'] ) , 9 ) )
+        wp_enqueue_script( 'html5shive', get_template_directory_uri() . '/js/html5shiv.min.js' , array(), '3.7.1', false );
+}
+add_action( 'wp_enqueue_scripts', 'rp_enqueue_lt_ie9' );
 
 // Add thickbox
 add_action( 'after_setup_theme', 'add_thickbox' );
