@@ -1,6 +1,6 @@
 <?php get_header() ?>
-<main role="main" id="main">
-    <div class="content">
+<div class="row">
+    <div class="col w66 content">
     <?php
     if (have_posts()) :
     	while (have_posts()) : the_post(); ?>
@@ -19,6 +19,6 @@
     	<?php endwhile; ?>
     <?php endif; ?>
     </div>
-<?php get_sidebar() ?>
-</main>
+    <?php get_sidebar() ?>
+</div>
 <?php get_footer() ?>

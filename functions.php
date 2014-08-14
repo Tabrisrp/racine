@@ -61,7 +61,7 @@ add_action( 'init', 'rp_nav_menus' );
 // Enqueue scripts and styles
 if ( !function_exists( 'rp_enqueue_scripts') ) {
     function rp_enqueue_scripts() {
-        wp_enqueue_style( 'theme-style', get_stylesheet_uri(), '', '1.2' );
+        wp_enqueue_style( 'theme-style', get_stylesheet_uri(), array( 'dashicons' ), '1.2' );
         if ( is_singular() ) {
             wp_enqueue_script( 'comment-reply' );
         }
@@ -87,20 +87,6 @@ function rp_enqueue_lt_ie9() {
 }
 add_action( 'wp_enqueue_scripts', 'rp_enqueue_lt_ie9' );
 
-// Add thickbox
-add_action( 'after_setup_theme', 'add_thickbox' );
-
-// Automaticly add class="thickbox" to images with links in editor content
-add_filter( 'the_content', 'rp_auto_thickbox', 10, 1 );
-if ( !function_exists( 'rp_auto_thickbox' ) ) {
-    function rp_auto_thickbox( $content ) {
-        $pattern = "/<a(.*?)href=('|\")([^>]*)('|\")(.*?)><img(.*?)src=('|\")([^>]*).(bmp|gif|jpeg|jpg|png)('|\")(.*?)\/><\/a>/i";
-        $replacement = '<a$1class="thickbox" href=$2$3$4$5><img$6src=$7$8.$9$10$11/></a>';
-        $content = preg_replace($pattern, $replacement, $content);
-        return $content;
-    }
-}
-
 // Add sidebars
 add_action( 'widgets_init', 'rp_register_sidebars' );
 if ( !function_exists( 'rp_register_sidebars' ) ) {
@@ -112,18 +98,41 @@ if ( !function_exists( 'rp_register_sidebars' ) ) {
             'class' => '',
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
             'after_widget' => '</div>',
-            'before_title' => '<h5 class="widgettitle">',
-            'after_title' => '</h5>'
+            'before_title' => '<div class="widgettitle">',
+            'after_title' => '</div>'
             )
         );
     }
 }
 
-// Add class to menu items
-add_filter('nav_menu_css_class' , 'rp_menu_item_class' , 10 , 1);
-if ( !function_exists( 'rp_menu_item_class' ) ) {
-    function rp_menu_item_class($classes) {
-        $classes[] = "flex-fluid";
-        return $classes;
-    }
+/**
+ * Filters wp_title to print a neat <title> tag based on what is being viewed.
+ *
+ * @param string $title Default title text for current view.
+ * @param string $sep Optional separator.
+ * @return string The filtered title.
+ */
+function rp_wp_title( $title, $sep ) {
+	if ( is_feed() ) {
+		return $title;
+	}
+	
+	global $page, $paged;
+
+	// Add the blog name
+	$title .= get_bloginfo( 'name', 'display' );
+
+	// Add the blog description for the home/front page.
+	$site_description = get_bloginfo( 'description', 'display' );
+	if ( $site_description && ( is_home() || is_front_page() ) ) {
+		$title .= " $sep $site_description";
+	}
+
+	// Add a page number if necessary:
+	if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() ) {
+		$title .= " $sep " . sprintf( __( 'Page %s', '_s' ), max( $paged, $page ) );
+	}
+
+	return $title;
 }
+add_filter( 'wp_title', 'rp_wp_title', 10, 2 );
