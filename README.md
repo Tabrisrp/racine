@@ -1,4 +1,4 @@
-wp-root-theme
+Racine
 =============
 
-Minimal code for quick WordPress theme development including Core theme features &amp; basic template files
+Another WordPress starter theme for quick development including Core theme features &amp; basic template files
