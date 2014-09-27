@@ -1,104 +1,158 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WP Root Theme\n"
-"POT-Creation-Date: 2014-08-14 15:28+0100\n"
-"PO-Revision-Date: 2014-08-14 15:31+0100\n"
+"Project-Id-Version: Racine 1.6\n"
+"POT-Creation-Date: 2014-09-27 23:03+0100\n"
+"PO-Revision-Date: 2014-09-27 23:04+0100\n"
 "Last-Translator: Rémy Perona <remperona@gmail.com>\n"
 "Language-Team: Rémy Perona <remperona@gmail.com>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.7\n"
+"X-Generator: Poedit 1.6.9\n"
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e\n"
-"X-Poedit-SearchPath-0: /Users/yui/Sites/wordpress/wp-content/themes/wp-root-"
-"theme\n"
+"X-Poedit-KeywordsList: __;_e;_nx:4c,1,2;esc_attr_e\n"
+"X-Poedit-SearchPath-0: /Users/yui/Sites/wordpress/wp-content/themes/racine\n"
 
-#: /Users/yui/Sites/wordpress/wp-content/themes/wp-root-theme/404.php:5
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/404.php:4
 msgid "Page not found"
 msgstr "Page non trouvée"
 
-#: /Users/yui/Sites/wordpress/wp-content/themes/wp-root-theme/comments.php:26
-#: /Users/yui/Sites/wordpress/wp-content/themes/wp-root-theme/comments.php:43
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/404.php:5
+msgid ""
+"We're sorry, but the content you are looking for could not be found. It may "
+"have been moved or deleted. Here are some suggestions to locate it :"
+msgstr ""
+"Nous sommes désolés, mais le contenu que vous recherchez n'a pas pu être "
+"trouvé. Il a peut-être été déplacé ou supprimé. Voici quelques suggestions "
+"pour le retrouver :"
+
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/404.php:7
+msgid "Use the navigation above"
+msgstr "Utilisez la navigation ci-dessus"
+
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/404.php:8
+msgid "Use the search form below"
+msgstr "Utilisez le formulaire de recherche ci-dessous"
+
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/404.php:9
+#, php-format
+msgid "Go back to the <a href=\"%s\">homepage</a>"
+msgstr "Retourner sur <a href=\"%s\">la page d'accueil</a>"
+
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/404.php:11
+msgid "Do a search for the required content"
+msgstr "Faire une recherche pour le contenu souhaité"
+
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/comments.php:19
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Une réflexion sur &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s réflexion sur &ldquo;%2$s&rdquo;"
+
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/comments.php:26
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/comments.php:43
 msgid "Comment navigation"
 msgstr "Navigation des commentaires"
 
-#: /Users/yui/Sites/wordpress/wp-content/themes/wp-root-theme/comments.php:27
-#: /Users/yui/Sites/wordpress/wp-content/themes/wp-root-theme/comments.php:44
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/comments.php:27
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/comments.php:44
 msgid "&larr; Older Comments"
 msgstr "&larr; Commentaires précédents"
 
-#: /Users/yui/Sites/wordpress/wp-content/themes/wp-root-theme/comments.php:28
-#: /Users/yui/Sites/wordpress/wp-content/themes/wp-root-theme/comments.php:45
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/comments.php:28
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/comments.php:45
 msgid "Newer Comments &rarr;"
 msgstr "Commentaires suivants &rarr;"
 
-#: /Users/yui/Sites/wordpress/wp-content/themes/wp-root-theme/comments.php:55
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/comments.php:55
 msgid "Comments are closed."
 msgstr "Les commentaires sont fermés."
 
-#: /Users/yui/Sites/wordpress/wp-content/themes/wp-root-theme/functions.php:52
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/functions.php:57
 msgid "Navigation"
 msgstr "Navigation"
 
-#: /Users/yui/Sites/wordpress/wp-content/themes/wp-root-theme/functions.php:53
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/functions.php:58
 msgid "Footer menu"
 msgstr "Menu pied de page"
 
-#: /Users/yui/Sites/wordpress/wp-content/themes/wp-root-theme/functions.php:95
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/functions.php:101
 msgid "Sidebar"
 msgstr "Colonne latérale"
 
-#: /Users/yui/Sites/wordpress/wp-content/themes/wp-root-theme/functions.php:97
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/functions.php:103
 msgid "Sidebar widgets zone"
 msgstr "Zone de widgets de la colonne latérale"
 
-#: /Users/yui/Sites/wordpress/wp-content/themes/wp-root-theme/functions.php:133
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/functions.php:139
 #, php-format
 msgid "Page %s"
 msgstr "Page %s"
 
-#: /Users/yui/Sites/wordpress/wp-content/themes/wp-root-theme/header.php:10
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/header.php:13
 msgid "Skip to main content"
 msgstr "Aller au contenu principal"
 
-#: /Users/yui/Sites/wordpress/wp-content/themes/wp-root-theme/inc/customizer.php:9
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/header.php:28
+msgid "Menu"
+msgstr "Menu"
+
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/inc/customizer.php:10
 msgid "Additional Section"
 msgstr "Section supplémentaire"
 
-#: /Users/yui/Sites/wordpress/wp-content/themes/wp-root-theme/inc/customizer.php:27
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/inc/customizer.php:28
 msgid "Links color"
 msgstr "Couleur des liens"
 
-#: /Users/yui/Sites/wordpress/wp-content/themes/wp-root-theme/loop-posts.php:8
-#: /Users/yui/Sites/wordpress/wp-content/themes/wp-root-theme/single.php:13
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/loop-posts.php:8
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/single.php:12
 msgid "Posted by"
 msgstr "Publié par"
 
-#: /Users/yui/Sites/wordpress/wp-content/themes/wp-root-theme/loop-posts.php:8
-#: /Users/yui/Sites/wordpress/wp-content/themes/wp-root-theme/single.php:13
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/loop-posts.php:8
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/single.php:12
 msgid "on"
 msgstr "le"
 
-#: /Users/yui/Sites/wordpress/wp-content/themes/wp-root-theme/loop-posts.php:20
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/loop-posts.php:10
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/single.php:13
+msgid "Categories:"
+msgstr "Catégories :"
+
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/loop-posts.php:13
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/single.php:14
+msgid "Tags:"
+msgstr "Mots-clés :"
+
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/loop-posts.php:24
 msgid "No posts found"
 msgstr "Aucune article trouvé"
 
-#: /Users/yui/Sites/wordpress/wp-content/themes/wp-root-theme/search.php:4
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/loop-posts.php:25
+msgid ""
+"There was nothing matching your criteria. You can try to widen your request."
+msgstr ""
+"Aucun article ne correspond à vos critères. Vous pouvez essayer d'élargir "
+"votre requête."
+
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/search.php:4
 msgid "Search Results for:"
 msgstr "Résultats de recherche pour : "
 
-#: /Users/yui/Sites/wordpress/wp-content/themes/wp-root-theme/searchform.php:2
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/searchform.php:2
 msgid "Search for:"
 msgstr "Recherche pour : "
 
-#: /Users/yui/Sites/wordpress/wp-content/themes/wp-root-theme/searchform.php:3
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/searchform.php:3
 msgid "Input search terms"
 msgstr "Entrez les termes de recherche"
 
-#: /Users/yui/Sites/wordpress/wp-content/themes/wp-root-theme/searchform.php:4
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/searchform.php:4
 msgid "Search"
 msgstr "Rechercher"

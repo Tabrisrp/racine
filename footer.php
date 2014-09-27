@@ -1,10 +1,13 @@
+        </div>
     </main>
     <footer role="contentinfo">
-        <nav role="navigation">
-            <?php wp_nav_menu( array( 'theme_location' => 'footer', 'container' => false, 'menu_class' => 'unstyled pl0' ) ) ?>
-        </nav>
+        <div class="mw1140p center">
+            <nav role="navigation">
+                <?php wp_nav_menu( array( 'theme_location' => 'footer', 'container' => false, 'menu_class' => 'unstyled pln footer-menu' ) ); ?>
+            </nav>
+            <p>&copy; <?php echo date( 'Y' ); ?> <?php bloginfo( 'name' ); ?></p>
+        </div>
     </footer>
-</div>
-<?php wp_footer() ?>
+<?php wp_footer(); ?>
 </body>
 </html>
