@@ -15,13 +15,8 @@ Included :
 * WordPress SEO breadcrumbs
 
 ## Changelog
-<<<<<<< HEAD
 ### 1.0.1
 * Various bugfixes
 
 ### 1.0
 * initial release
-=======
-### 1.0
-* initial release
->>>>>>> FETCH_HEAD
