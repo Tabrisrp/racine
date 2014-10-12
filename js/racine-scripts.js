@@ -1,12 +1,13 @@
 jQuery(document).ready(function($) {
+    $( '#drop').on( 'click', function(e) {
+        e.preventDefault();
+        $( '.main-navigation' ).slideToggle();
+    });
+
     function mobile_dropdown_menu(event) {
         if ( "matchMedia" in window ) {
             if ( window.matchMedia( "(max-width:45.7143em)" ).matches ) {
                 $( '.main-navigation').hide();
-                $( '#drop').on( 'click', function(e) {
-                    e.preventDefault();
-                    $( '.main-navigation' ).slideToggle();
-                });
             } else {
                 $( '.main-navigation').css( 'display', 'table' );
             }

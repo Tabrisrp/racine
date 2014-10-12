@@ -16,7 +16,8 @@ if ( !function_exists( 'racine_register_theme_customizer' ) ) {
             'racine_link_color',
             array(
                 'default' => '#0000FF',
-                'transport' => 'postMessage'
+                'transport' => 'postMessage',
+                'sanitize_callback' => 'sanitize_text_field'
             )
         );
     
@@ -35,12 +36,14 @@ if ( !function_exists( 'racine_register_theme_customizer' ) ) {
 }
 add_action( 'customize_register', 'racine_register_theme_customizer' );
 
-function racine_customizer_css() {
-    ?>
-    <style>
-        a { color: <?php echo get_theme_mod( 'racine_link_color' ) ?>; }
-    </style>
-    <?php
+if( !function_exists( 'racine_customizer_css' ) ) {
+    function racine_customizer_css() {
+        ?>
+        <style>
+            a { color: <?php echo get_theme_mod( 'racine_link_color' ) ?>; }
+        </style>
+        <?php
+    }
 }
 add_action( 'wp_head', 'racine_customizer_css' );
 
