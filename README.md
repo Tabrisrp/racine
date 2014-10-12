@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Racine
 
 Another WordPress starter theme for quick development, including Core theme features & basic template files.
@@ -16,11 +15,8 @@ Included :
 * WordPress SEO breadcrumbs
 
 ## Changelog
+### 1.0.1
+* Various bugfixes
+
 ### 1.0
 * initial release
-=======
-Racine
-=============
-
-Another WordPress starter theme for quick development including Core theme features &amp; basic template files
->>>>>>> FETCH_HEAD
