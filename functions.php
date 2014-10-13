@@ -40,7 +40,7 @@ if ( !function_exists( 'racine_theme_features' ) ) {
     	add_theme_support( 'html5', $markup );
 
     	// Add theme support for Translation
-    	load_theme_textdomain( 'racine', get_template_directory() . '/lang' );
+    	load_theme_textdomain( 'racine', get_template_directory() . '/languages' );
 
         // Add support for Editor Style
         add_editor_style( 'editor-style.css' );
