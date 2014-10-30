@@ -15,6 +15,9 @@ Included :
 * WordPress SEO breadcrumbs
 
 ## Changelog
+### 1.0.2
+* Update for new title tag handling introduced in WP 4.1 [https://make.wordpress.org/core/2014/10/29/title-tags-in-4-1/](https://make.wordpress.org/core/2014/10/29/title-tags-in-4-1/)
+
 ### 1.0.1
 * Various bugfixes
 
