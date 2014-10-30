@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Racine 1.6\n"
 "POT-Creation-Date: 2014-09-27 23:03+0100\n"
-"PO-Revision-Date: 2014-09-27 23:04+0100\n"
+"PO-Revision-Date: 2014-10-13 21:45+0100\n"
 "Last-Translator: Rémy Perona <remperona@gmail.com>\n"
 "Language-Team: Rémy Perona <remperona@gmail.com>\n"
 "Language: fr\n"
@@ -52,7 +52,7 @@ msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] "Une réflexion sur &ldquo;%2$s&rdquo;"
-msgstr[1] "%1$s réflexion sur &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s réflexions sur &ldquo;%2$s&rdquo;"
 
 #: /Users/yui/Sites/wordpress/wp-content/themes/racine/comments.php:26
 #: /Users/yui/Sites/wordpress/wp-content/themes/racine/comments.php:43

@@ -13,6 +13,9 @@ if ( !function_exists( 'racine_theme_features' ) ) {
     	// Add theme support for Automatic Feed Links
     	add_theme_support( 'automatic-feed-links' );
 
+        // Add theme support for title tag display
+        add_theme_support( 'title-tag' );
+
     	// Add theme support for Featured Images
     	add_theme_support( 'post-thumbnails' );
 
@@ -110,6 +113,14 @@ if ( !function_exists( 'racine_register_sidebars' ) ) {
         );
     }
 }
+
+// Backcompatibility for WP < 4.1
+if ( ! function_exists( '_wp_render_title_tag' ) ) :
+function racine_render_title() {
+    echo '<title>' . wp_title( '|', false, 'right' ) . "</title>\n";
+}
+add_action( 'wp_head', 'racine_render_title' );
+endif;
 
 /**
  * Filters wp_title to print a neat <title> tag based on what is being viewed.
