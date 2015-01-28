@@ -15,10 +15,7 @@
     	    	</aside>
     	    </article>
     	<?php endwhile; ?>
-    	<nav class="pagination">
-    	    <?php previous_posts_link(); ?>
-    	    <?php next_posts_link(); ?>
-    	</nav>
+    	<?php the_posts_pagination(); ?>
     <?php else : ?>
         <div>
             <h2><?php _e( 'No posts found', 'racine' ); ?></h2>

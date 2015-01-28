@@ -15,6 +15,15 @@ Included :
 * WordPress SEO breadcrumbs
 
 ## Changelog
+### 1.0.3
+* Replaced archive title & description, paginations & navigations by the new template tags introduced in WP 4.1 [(https://make.wordpress.org/core/2014/12/04/new-template-tags-in-4-1/)](https://make.wordpress.org/core/2014/12/04/new-template-tags-in-4-1/)
+* Main navigation is now using flex instead of table layout
+* CSS & media queries fixes
+* Updated to KNACSS 3.1
+
+### 1.0.2
+* Added title tag support for WP 4.1 [(https://make.wordpress.org/core/2014/12/04/new-template-tags-in-4-1/)](https://make.wordpress.org/core/2014/12/04/new-template-tags-in-4-1/)
+
 ### 1.0.1
 * Various bugfixes
 

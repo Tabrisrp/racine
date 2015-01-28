@@ -4,12 +4,12 @@ jQuery(document).ready(function($) {
         $( '.main-navigation' ).slideToggle();
     });
 
-    function mobile_dropdown_menu(event) {
+    function mobile_dropdown_menu() {
         if ( "matchMedia" in window ) {
-            if ( window.matchMedia( "(max-width:45.7143em)" ).matches ) {
-                $( '.main-navigation').hide();
+            if ( window.matchMedia( "(max-width:48em)" ).matches ) {
+                $( '.main-navigation').hide().removeClass( 'flex-h').addClass( 'flex-v' );
             } else {
-                $( '.main-navigation').css( 'display', 'table' );
+                $( '.main-navigation').show().removeClass( 'flex-v').addClass( 'flex-h' );
             }
         }
     }
