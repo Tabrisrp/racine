@@ -3,7 +3,7 @@
     	    <article <?php post_class() ?>>
     	    	<h2 class="entry-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
     	    	<?php the_post_thumbnail(); ?>
-    	    	<?php the_content( __( 'Continue reading &rarr;', 'racine' ) ); ?>
+    	    	<?php the_content( sprintf( __( 'Continue reading %s &rarr;', 'racine' ), '<span class="screen-reader-text"> ' . get_the_title() . '</span>' ) ); ?>
     	    	<aside class="small">
     	    	    <p><?php _e( 'Posted by', 'racine' ); ?> <span class="vcard author"><span class="fn"><?php the_author(); ?></span></span> <?php _e( 'on', 'racine' ) ?> <span class="updated"><?php echo get_the_date(); ?></span></p>
     	    	    <?php if ( !is_category() ) : ?>

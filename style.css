@@ -28,6 +28,12 @@ Use it to make something cool, have fun, and share what you've learned with othe
     display: block;
 }
 
+.drop {
+    -webkit-appearance: none;
+    border: none;
+    background: none;
+}
+
 .main-navigation .sub-menu {
     list-style: none;
 }
@@ -108,7 +114,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
         background: #eee;
     }
 
-    .main-navigation .menu-item-has-children:hover>.sub-menu {
+    .main-navigation .menu-item-has-children:hover>.sub-menu,
+    .main-navigation .menu-item-has-children:focus>.sub-menu {
         display: block;
     }
 }

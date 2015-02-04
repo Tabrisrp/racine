@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Racine 1.6\n"
-"POT-Creation-Date: 2014-09-27 23:03+0100\n"
-"PO-Revision-Date: 2014-10-13 21:45+0100\n"
+"POT-Creation-Date: 2015-02-01 16:19+0100\n"
+"PO-Revision-Date: 2015-02-01 16:19+0100\n"
 "Last-Translator: Rémy Perona <remperona@gmail.com>\n"
 "Language-Team: Rémy Perona <remperona@gmail.com>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.9\n"
+"X-Generator: Poedit 1.7.1\n"
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -73,32 +73,29 @@ msgstr "Commentaires suivants &rarr;"
 msgid "Comments are closed."
 msgstr "Les commentaires sont fermés."
 
-#: /Users/yui/Sites/wordpress/wp-content/themes/racine/functions.php:57
-msgid "Navigation"
-msgstr "Navigation"
-
-#: /Users/yui/Sites/wordpress/wp-content/themes/racine/functions.php:58
-msgid "Footer menu"
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/footer.php:5
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/functions.php:61
+msgid "Footer Menu"
 msgstr "Menu pied de page"
 
-#: /Users/yui/Sites/wordpress/wp-content/themes/racine/functions.php:101
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/functions.php:60
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/header.php:26
+msgid "Main Navigation"
+msgstr "Navigation principale"
+
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/functions.php:104
 msgid "Sidebar"
 msgstr "Colonne latérale"
 
-#: /Users/yui/Sites/wordpress/wp-content/themes/racine/functions.php:103
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/functions.php:106
 msgid "Sidebar widgets zone"
 msgstr "Zone de widgets de la colonne latérale"
 
-#: /Users/yui/Sites/wordpress/wp-content/themes/racine/functions.php:139
-#, php-format
-msgid "Page %s"
-msgstr "Page %s"
-
-#: /Users/yui/Sites/wordpress/wp-content/themes/racine/header.php:13
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/header.php:12
 msgid "Skip to main content"
 msgstr "Aller au contenu principal"
 
-#: /Users/yui/Sites/wordpress/wp-content/themes/racine/header.php:28
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/header.php:27
 msgid "Menu"
 msgstr "Menu"
 
@@ -106,40 +103,49 @@ msgstr "Menu"
 msgid "Additional Section"
 msgstr "Section supplémentaire"
 
-#: /Users/yui/Sites/wordpress/wp-content/themes/racine/inc/customizer.php:28
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/inc/customizer.php:29
 msgid "Links color"
 msgstr "Couleur des liens"
 
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/loop-posts.php:6
+#, php-format
+msgid "Continue reading %s &rarr;"
+msgstr "Lire la suite %s &rarr;"
+
 #: /Users/yui/Sites/wordpress/wp-content/themes/racine/loop-posts.php:8
-#: /Users/yui/Sites/wordpress/wp-content/themes/racine/single.php:12
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/single.php:22
 msgid "Posted by"
 msgstr "Publié par"
 
 #: /Users/yui/Sites/wordpress/wp-content/themes/racine/loop-posts.php:8
-#: /Users/yui/Sites/wordpress/wp-content/themes/racine/single.php:12
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/single.php:22
 msgid "on"
 msgstr "le"
 
 #: /Users/yui/Sites/wordpress/wp-content/themes/racine/loop-posts.php:10
-#: /Users/yui/Sites/wordpress/wp-content/themes/racine/single.php:13
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/single.php:23
 msgid "Categories:"
 msgstr "Catégories :"
 
 #: /Users/yui/Sites/wordpress/wp-content/themes/racine/loop-posts.php:13
-#: /Users/yui/Sites/wordpress/wp-content/themes/racine/single.php:14
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/single.php:24
 msgid "Tags:"
 msgstr "Mots-clés :"
 
-#: /Users/yui/Sites/wordpress/wp-content/themes/racine/loop-posts.php:24
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/loop-posts.php:21
 msgid "No posts found"
 msgstr "Aucune article trouvé"
 
-#: /Users/yui/Sites/wordpress/wp-content/themes/racine/loop-posts.php:25
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/loop-posts.php:22
 msgid ""
 "There was nothing matching your criteria. You can try to widen your request."
 msgstr ""
 "Aucun article ne correspond à vos critères. Vous pouvez essayer d'élargir "
 "votre requête."
+
+#: /Users/yui/Sites/wordpress/wp-content/themes/racine/page.php:12
+msgid "Pages:"
+msgstr "﻿Pages :"
 
 #: /Users/yui/Sites/wordpress/wp-content/themes/racine/search.php:4
 msgid "Search Results for:"

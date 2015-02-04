@@ -57,8 +57,8 @@ if ( !function_exists( 'racine_nav_menus' ) ) {
     function racine_nav_menus() {
 
     	$locations = array(
-    		'navigation' => __( 'Navigation', 'racine' ),
-    		'footer' => __( 'Footer menu', 'racine' ),
+    		'navigation' => __( 'Main Navigation', 'racine' ),
+    		'footer' => __( 'Footer Menu', 'racine' ),
     	);
     	register_nav_menus( $locations );
     }
