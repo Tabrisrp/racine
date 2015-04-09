@@ -23,9 +23,9 @@
             <p class="site-description"><?php bloginfo( 'description' ); ?></p>
         <?php endif ?>
         <?php get_search_form(); ?>
-        <nav role="navigation" aria-label="<?php _e( 'Main Navigation', 'racine' ); ?>">
+        <nav role="navigation" aria-label="<?php esc_attr_e( 'Main Navigation', 'racine' ); ?>">
             <button id="drop" class="drop"><i class="dashicons dashicons-menu"></i> <?php _e( 'Menu', 'racine' ); ?></button>
-            <?php wp_nav_menu( array( 'theme_location' => 'navigation', 'container' => false, 'menu_class' => 'pln unstyled flex flex-h main-navigation' ) ); ?>
+            <?php wp_nav_menu( array( 'theme_location' => 'navigation', 'container' => false, 'menu_class' => 'pln unstyled flexbox flexbox-h main-navigation' ) ); ?>
         </nav>
     </div>
 </header>

@@ -7,9 +7,9 @@ jQuery(document).ready(function($) {
     function mobile_dropdown_menu() {
         if ( "matchMedia" in window ) {
             if ( window.matchMedia( "(max-width:48em)" ).matches ) {
-                $( '.main-navigation').hide().removeClass( 'flex-h').addClass( 'flex-v' );
+                $( '.main-navigation').hide().removeClass( 'flexbox-h').addClass( 'flexbox-v' );
             } else {
-                $( '.main-navigation').show().removeClass( 'flex-v').addClass( 'flex-h' );
+                $( '.main-navigation').show().removeClass( 'flexbox-v').addClass( 'flexbox-h' );
             }
         }
     }

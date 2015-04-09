@@ -40,7 +40,7 @@ if( !function_exists( 'racine_customizer_css' ) ) {
     function racine_customizer_css() {
         ?>
         <style>
-            a { color: <?php echo get_theme_mod( 'racine_link_color' ) ?>; }
+            a { color: <?php echo get_theme_mod( 'racine_link_color', '#0000FF' ) ?>; }
         </style>
         <?php
     }
@@ -49,7 +49,7 @@ add_action( 'wp_head', 'racine_customizer_css' );
 
 if ( !function_exists( 'racine_customizer_live_preview' ) ) {
     function racine_customizer_live_preview() {
-        wp_enqueue_script( 'rp-customizer', get_stylesheet_directory_uri() . '/js/customizer.js', array( 'jquery', 'customize-preview' ), '1.0', true );
+        wp_enqueue_script( 'rp-customizer', get_stylesheet_directory_uri() . '/js/customizer.js', array( 'jquery', 'customize-preview' ), '1.0.4', true );
     }
 }
 add_action( 'customize_preview_init', 'racine_customizer_live_preview' );

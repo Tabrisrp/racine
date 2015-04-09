@@ -3,8 +3,9 @@
 require_once( 'inc/customizer.php' );
 
 // Set content width value based on the theme's design
-if ( ! isset( $content_width ) )
-	$content_width = 600;
+if ( ! isset( $content_width ) ) {
+	$content_width = 1140;
+}
 
 // Register Theme Features
 if ( !function_exists( 'racine_theme_features' ) ) {
@@ -66,17 +67,24 @@ if ( !function_exists( 'racine_nav_menus' ) ) {
 // Hook into the 'init' action
 add_action( 'init', 'racine_nav_menus' );
 
-// Enqueue scripts and styles
+// Enqueue scripts
 if ( !function_exists( 'racine_enqueue_scripts') ) {
     function racine_enqueue_scripts() {
-        wp_enqueue_style( 'racine', get_stylesheet_uri(), array( 'dashicons' ), '1.2' );
-        wp_enqueue_script( 'racine', get_template_directory_uri() . '/js/racine-scripts.js', array( 'jquery' ), '1.5', true );
+        wp_enqueue_script( 'racine', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), '1.0.4', true );
         if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
             wp_enqueue_script( 'comment-reply' );
         }
     }
 }
 add_action( 'wp_enqueue_scripts', 'racine_enqueue_scripts' );
+
+// Enqueue styles
+if ( !function_exists( 'racine_enqueue_styles' ) ) {
+    function racine_enqueue_styles() {
+        wp_enqueue_style( 'racine', get_template_directory_uri() . '/style.css', array( 'dashicons' ) );
+    }
+}
+add_action( 'wp_enqueue_scripts', 'racine_enqueue_styles' );
 
 //Conditionally Enqueue Script for IE browsers less than IE 9
 function racine_enqueue_lt_ie9() {
