@@ -88,19 +88,10 @@ add_action( 'wp_enqueue_scripts', 'racine_enqueue_styles' );
 
 //Conditionally Enqueue Script for IE browsers less than IE 9
 function racine_enqueue_lt_ie9() {
-    global $is_IE;
+    global $wp_scripts;
  
-    // Return early, if not IE
-    if ( ! $is_IE ) return;
- 
-    // Include the file, if needed
-    if ( ! function_exists( 'wp_check_browser_version' ) )
-        include_once( ABSPATH . 'wp-admin/includes/dashboard.php' );
- 
-    // IE version conditional enqueue
-    $response = wp_check_browser_version();
-    if ( 0 > version_compare( intval( $response['version'] ) , 9 ) )
-        wp_enqueue_script( 'html5shiv', get_template_directory_uri() . '/js/html5shiv.min.js' , array(), '3.7.1', false );
+    wp_enqueue_script( 'html5shiv', get_template_directory_uri() . '/js/html5shiv.min.js' , array(), '3.7.1', false );
+    $wp_scripts->add_data( 'html5shiv', 'conditional', 'lt IE 9' );
 }
 add_action( 'wp_enqueue_scripts', 'racine_enqueue_lt_ie9' );
 
