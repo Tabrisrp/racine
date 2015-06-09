@@ -1,4 +1,6 @@
 jQuery(document).ready(function($) {
+    $( 'html' ).removeClass( 'no-js' );
+
     $( '#drop').on( 'click', function(e) {
         e.preventDefault();
         $( '.main-navigation' ).slideToggle();

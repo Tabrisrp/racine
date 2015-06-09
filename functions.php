@@ -47,7 +47,7 @@ if ( !function_exists( 'racine_theme_features' ) ) {
     	load_theme_textdomain( 'racine', get_template_directory() . '/languages' );
 
         // Add support for Editor Style
-        add_editor_style( 'editor-style.css' );
+        add_editor_style( 'css/editor-style.css' );
     }
 }
 // Hook into the 'after_setup_theme' action

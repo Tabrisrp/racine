@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="content">
+<div class="page-content">
     <?php get_template_part( 'loop', 'posts' ); ?>
 </div>
 <?php get_sidebar(); ?>

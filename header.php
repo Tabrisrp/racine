@@ -25,7 +25,7 @@
         <?php get_search_form(); ?>
         <nav role="navigation" aria-label="<?php esc_attr_e( 'Main Navigation', 'racine' ); ?>">
             <button id="drop" class="drop"><i class="dashicons dashicons-menu"></i> <?php _e( 'Menu', 'racine' ); ?></button>
-            <?php wp_nav_menu( array( 'theme_location' => 'navigation', 'container' => false, 'menu_class' => 'pln unstyled flexbox flexbox-h main-navigation' ) ); ?>
+            <?php wp_nav_menu( array( 'theme_location' => 'navigation', 'container' => false, 'menu_class' => 'pln unstyled flex-container flex-container-h main-navigation' ) ); ?>
         </nav>
     </div>
 </header>
